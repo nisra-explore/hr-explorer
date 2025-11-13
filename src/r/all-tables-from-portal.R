@@ -131,6 +131,7 @@ for (i in seq_along(data_portal$label)) {
   json_data <- fetch_dataset(matrix, api_key, data_portal$label[i])
 
   subject <- json_data$extension$subject$value
+  if (subject != "NI Civil Service workforce") next
   product_code <- json_data$extension$product$code
 
   name <- gsub("\u2013", "-", data_portal$label[i], fixed = TRUE)
@@ -194,6 +195,7 @@ for (i in seq_along(data_portal$label)) {
 }
 
 tables$tables <- tables$tables[order(names(tables$tables))]
+tables$table_count <- length(tables$tables)
 
 write_json(tables,
            "public/data/data-portal-tables.json",
