@@ -1,5 +1,5 @@
 {
-  "table_count": 1,
+  "table_count": 13,
   "tables": {
     "CSBHWL": {
       "name": "Civil Servants by Home and Work Location",
@@ -86,6 +86,908 @@
       "product": "NICS workforce",
       "product_code": "NICSW",
       "rows": 216
+    },
+    "NICSEMP03": {
+      "name": "Civil Service headcount and index of employment",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["HCOUNT", "INDEX"],
+            "label": {
+              "HCOUNT": "Headcount",
+              "INDEX": "Index (April 2016=100)"
+            },
+            "unit": {
+              "HCOUNT": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "INDEX": {
+                "decimals": 1,
+                "label": "Index",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "label": {
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "ORG": {
+          "category": {
+            "index": ["NICS", "HCS", "SG", "WG"],
+            "label": {
+              "NICS": "Northern Ireland Civil Service",
+              "HCS": "Home Civil Service",
+              "SG": "Scottish Government",
+              "WG": "Welsh Government"
+            }
+          },
+          "label": "Organisation"
+        }
+      },
+      "statistics": {
+        "HCOUNT": "Headcount",
+        "INDEX": "Index (April 2016=100)"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 80
+    },
+    "NICSEMP04": {
+      "name": "NICS industrial and non-industrial staff",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["HCOUNT", "FTES"],
+            "label": {
+              "HCOUNT": "Headcount",
+              "FTES": "Full-Time Equivalent Staff"
+            },
+            "unit": {
+              "HCOUNT": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "FTES": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2019", "2020", "2021", "2022", "2023", "2024"],
+            "label": {
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "STFFGRP": {
+          "category": {
+            "index": ["NONIND", "IND"],
+            "label": {
+              "NONIND": "Non-industrial",
+              "IND": "Industrial"
+            }
+          },
+          "label": "Staff group"
+        }
+      },
+      "statistics": {
+        "HCOUNT": "Headcount",
+        "FTES": "Full-Time Equivalent Staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2019", "2020", "2021", "2022", "2023", "2024"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 24
+    },
+    "NICSEMP05": {
+      "name": "NICS temporary/casual staff",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["HCOUNT_CASUAL", "FTES_CASUAL"],
+            "label": {
+              "HCOUNT_CASUAL": "Headcount of casual staff",
+              "FTES_CASUAL": "Full-time equivalent casual staff"
+            },
+            "unit": {
+              "HCOUNT_CASUAL": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "FTES_CASUAL": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2019", "2020", "2021", "2022", "2023", "2024"],
+            "label": {
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "NI": {
+          "category": {
+            "index": "N92000002",
+            "label": {
+              "N92000002": "Northern Ireland"
+            }
+          },
+          "label": "Northern Ireland"
+        }
+      },
+      "statistics": {
+        "HCOUNT_CASUAL": "Headcount of casual staff",
+        "FTES_CASUAL": "Full-time equivalent casual staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2019", "2020", "2021", "2022", "2023", "2024"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 12
+    },
+    "NICSEMP06": {
+      "name": "NICS staff grade level",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["HCOUNT", "HCOUNT_PER", "FTES", "FTES_PER"],
+            "label": {
+              "HCOUNT": "Headcount",
+              "HCOUNT_PER": "Percentage of headcount",
+              "FTES": "Full-Time Equivalent Staff",
+              "FTES_PER": "Percentage of Full-Time Equivalent Staff"
+            },
+            "unit": {
+              "HCOUNT": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "HCOUNT_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "FTES": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "FTES_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "label": {
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "GRADE": {
+          "category": {
+            "index": ["PG", "IND", "AA", "AO", "EOII", "EOI", "SO", "DP", "G7", "G6", "G5+", "All"],
+            "label": {
+              "PG": "Prison Grade",
+              "IND": "Industrial",
+              "AA": "Administrative Assistant",
+              "AO": "Administrative Officer",
+              "EOII": "Executive Officer II",
+              "EOI": "Executive Officer I",
+              "SO": "Staff Officer",
+              "DP": "Deputy Principal",
+              "G7": "Grade 7",
+              "G6": "Grade 6",
+              "G5+": "Grade 5 and above",
+              "All": "All"
+            }
+          },
+          "label": "Grade level"
+        }
+      },
+      "statistics": {
+        "HCOUNT": "Headcount",
+        "HCOUNT_PER": "Percentage of headcount",
+        "FTES": "Full-Time Equivalent Staff",
+        "FTES_PER": "Percentage of Full-Time Equivalent Staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 336
+    },
+    "NICSEMP07": {
+      "name": "NICS staff by department",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["HCOUNT", "HCOUNT_PER", "FTES", "FTES_PER"],
+            "label": {
+              "HCOUNT": "Headcount",
+              "HCOUNT_PER": "Percentage of headcount",
+              "FTES": "Full-Time Equivalent Staff",
+              "FTES_PER": "Percentage of Full-Time Equivalent Staff"
+            },
+            "unit": {
+              "HCOUNT": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "HCOUNT_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              },
+              "FTES": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "FTES_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "label": {
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "DPRTMNT": {
+          "category": {
+            "index": ["DfC", "DfI", "DfE", "DAERA", "DE", "DoF", "DoH", "DoJ", "PPS", "TEO", "OTHER", "All"],
+            "label": {
+              "DfC": "Department for Communities",
+              "DfI": "Department for Infrastructure",
+              "DfE": "Department for the Economy",
+              "DAERA": "Department of Agriculture, Environment and Rural Affairs",
+              "DE": "Department of Education",
+              "DoF": "Department of Finance",
+              "DoH": "Department of Health",
+              "DoJ": "Department of Justice",
+              "PPS": "Public Prosecution Service",
+              "TEO": "The Executive Office",
+              "OTHER": "Other",
+              "All": "All"
+            }
+          },
+          "label": "Department"
+        }
+      },
+      "statistics": {
+        "HCOUNT": "Headcount",
+        "HCOUNT_PER": "Percentage of headcount",
+        "FTES": "Full-Time Equivalent Staff",
+        "FTES_PER": "Percentage of Full-Time Equivalent Staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 336
+    },
+    "NICSEMP08": {
+      "name": "NICS staff by sex and working pattern",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["HCOUNT", "HCOUNT_PER"],
+            "label": {
+              "HCOUNT": "Headcount",
+              "HCOUNT_PER": "Percentage of headcount"
+            },
+            "unit": {
+              "HCOUNT": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "HCOUNT_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+            "label": {
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024",
+              "2025": "2025"
+            }
+          },
+          "label": "Year"
+        },
+        "Sex": {
+          "category": {
+            "index": ["1", "2", "All"],
+            "label": {
+              "1": "Females",
+              "2": "Males",
+              "All": "All persons"
+            }
+          },
+          "label": "Sex"
+        },
+        "WRKPTTRN": {
+          "category": {
+            "index": ["PT", "FT", "All"],
+            "label": {
+              "PT": "Part-time",
+              "FT": "Full-time",
+              "All": "All"
+            }
+          },
+          "label": "Working pattern"
+        }
+      },
+      "statistics": {
+        "HCOUNT": "Headcount",
+        "HCOUNT_PER": "Percentage of headcount"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 126
+    },
+    "NICSEMP09": {
+      "name": "NICS staff working part-time by type of part-time working",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "PTS_PER",
+            "label": {
+              "PTS_PER": "Percentage of part-time staff"
+            },
+            "unit": {
+              "PTS_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024",
+            "label": {
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "Sex": {
+          "category": {
+            "index": ["1", "2"],
+            "label": {
+              "1": "Females",
+              "2": "Males"
+            }
+          },
+          "label": "Sex"
+        },
+        "TYPE_PT": {
+          "category": {
+            "index": ["TT_OVERALL", "TT_FTH", "TT_RH"],
+            "label": {
+              "TT_OVERALL": "Term time overall",
+              "TT_FTH": "Term time with full time hours rest of year",
+              "TT_RH": "Term time with reduced hours rest of year"
+            }
+          },
+          "label": "Type of part-time working"
+        }
+      },
+      "statistics": {
+        "PTS_PER": "Percentage of part-time staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024",
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 6
+    },
+    "NICSEMP10": {
+      "name": "NICS female staff working part-time",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["PTS_FEM", "PTS_FEM_PER"],
+            "label": {
+              "PTS_FEM": "Part-time female staff",
+              "PTS_FEM_PER": "Percentage of part-time female staff"
+            },
+            "unit": {
+              "PTS_FEM": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "PTS_FEM_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2019", "2020", "2021", "2022", "2023", "2024"],
+            "label": {
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "GRADE": {
+          "category": {
+            "index": ["PG", "IND", "AA", "AO", "EOII", "EOI", "SO", "DP", "G7", "G6", "G5+", "All"],
+            "label": {
+              "PG": "Prison Grade",
+              "IND": "Industrial",
+              "AA": "Administrative Assistant",
+              "AO": "Administrative Officer",
+              "EOII": "Executive Officer II",
+              "EOI": "Executive Officer I",
+              "SO": "Staff Officer",
+              "DP": "Deputy Principal",
+              "G7": "Grade 7",
+              "G6": "Grade 6",
+              "G5+": "Grade 5 and above",
+              "All": "All"
+            }
+          },
+          "label": "Grade level"
+        }
+      },
+      "statistics": {
+        "PTS_FEM": "Part-time female staff",
+        "PTS_FEM_PER": "Percentage of part-time female staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2019", "2020", "2021", "2022", "2023", "2024"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 144
+    },
+    "NICSEMP11": {
+      "name": "NICS leavers",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["LS", "LS_PER"],
+            "label": {
+              "LS": "Leaving staff",
+              "LS_PER": "Percentage of leaving staff"
+            },
+            "unit": {
+              "LS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "LS_PER": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2023/24",
+            "label": {
+              "2023/24": "2023/24"
+            }
+          },
+          "label": "Financial year"
+        },
+        "RFL": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "All"],
+            "label": {
+              "1": "Resignation",
+              "2": "Age retirement",
+              "3": "Early retirement",
+              "4": "Health",
+              "5": "Other",
+              "All": "All"
+            }
+          },
+          "label": "Reason for leaving"
+        }
+      },
+      "statistics": {
+        "LS": "Leaving staff",
+        "LS_PER": "Percentage of leaving staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2023/24",
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 12
+    },
+    "NICSEMP12": {
+      "name": "NICS staff leaving rates",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": ["LS", "LS_RATE"],
+            "label": {
+              "LS": "Leaving staff",
+              "LS_RATE": "Leaving rate"
+            },
+            "unit": {
+              "LS": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              },
+              "LS_RATE": {
+                "decimals": 1,
+                "label": "%",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": ["2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24"],
+            "label": {
+              "2016/17": "2016/17",
+              "2017/18": "2017/18",
+              "2018/19": "2018/19",
+              "2019/20": "2019/20",
+              "2020/21": "2020/21",
+              "2021/22": "2021/22",
+              "2022/23": "2022/23",
+              "2023/24": "2023/24"
+            }
+          },
+          "label": "Financial year"
+        },
+        "RFL": {
+          "category": {
+            "index": ["1", "2", "3", "All"],
+            "label": {
+              "1": "Resignation",
+              "2": "Retirement",
+              "3": "Ill health",
+              "All": "All"
+            }
+          },
+          "label": "Reason for leaving"
+        }
+      },
+      "statistics": {
+        "LS": "Leaving staff",
+        "LS_RATE": "Leaving rate"
+      },
+      "time": "TLIST(A1)",
+      "time_series": ["2016/17", "2017/18", "2018/19", "2019/20", "2020/21", "2021/22", "2022/23", "2023/24"],
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 64
+    },
+    "NICSEMP14": {
+      "name": "NICS staff occupations",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "STAFF",
+            "label": {
+              "STAFF": "Staff"
+            },
+            "unit": {
+              "STAFF": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024",
+            "label": {
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "OCCPTN": {
+          "category": {
+            "index": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "All"],
+            "label": {
+              "1": "Agricultural Economists",
+              "2": "Agricultural Inspectors (Grade)",
+              "3": "Agricultural Inspectors (Group)",
+              "4": "Architects",
+              "5": "Careers Officers",
+              "6": "Civil Engineers",
+              "7": "Computing",
+              "8": "Curatorial Grade",
+              "9": "DE Inspectorate",
+              "10": "Economists",
+              "11": "Fisheries",
+              "12": "Foreperson",
+              "13": "Forestry",
+              "14": "General Service",
+              "15": "General Service (Accountant)",
+              "16": "General Service (Auditor)",
+              "17": "Health and Safety Inspectors",
+              "18": "Industrial Grades",
+              "19": "Information Officers",
+              "20": "Legal Grades (Solicitors)",
+              "21": "M&E Engineers",
+              "22": "Mapping and Charting",
+              "23": "Meat Inspectors",
+              "24": "Miscellaneous",
+              "25": "Planning Office Staff",
+              "26": "Prison Officers",
+              "27": "Psychologists",
+              "28": "Quantity Surveyors",
+              "29": "Science Grades",
+              "30": "Statisticians",
+              "31": "Support Grades",
+              "32": "Trading Standards",
+              "33": "Typing",
+              "34": "Valuation",
+              "35": "Vehicle and Driving Examiners",
+              "36": "Veterinary Officers",
+              "37": "YJA Specialisms",
+              "All": "All"
+            }
+          },
+          "label": "Occupation"
+        }
+      },
+      "statistics": {
+        "STAFF": "Staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024",
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 38
+    },
+    "NICSEMP15": {
+      "name": "NICS staff grade level by department (full-time equivalent)",
+      "updated": "2025-12-05",
+      "categories": {
+        "STATISTIC": {
+          "category": {
+            "index": "STAFF",
+            "label": {
+              "STAFF": "Staff"
+            },
+            "unit": {
+              "STAFF": {
+                "decimals": 0,
+                "label": "Number",
+                "position": "end"
+              }
+            }
+          },
+          "label": "Statistic"
+        },
+        "TLIST(A1)": {
+          "category": {
+            "index": "2024",
+            "label": {
+              "2024": "2024"
+            }
+          },
+          "label": "Year"
+        },
+        "GRADE": {
+          "category": {
+            "index": ["PG", "IND", "AA", "AO", "EOII", "EOI", "SO", "DP", "G7", "G6", "G5+", "All"],
+            "label": {
+              "PG": "Prison Grade",
+              "IND": "Industrial",
+              "AA": "Administrative Assistant",
+              "AO": "Administrative Officer",
+              "EOII": "Executive Officer II",
+              "EOI": "Executive Officer I",
+              "SO": "Staff Officer",
+              "DP": "Deputy Principal",
+              "G7": "Grade 7",
+              "G6": "Grade 6",
+              "G5+": "Grade 5 and above",
+              "All": "All"
+            }
+          },
+          "label": "Grade level"
+        },
+        "DPRTMNT": {
+          "category": {
+            "index": ["DfC", "DfI", "DfE", "DAERA", "DE", "DoF", "DoH", "DoJ", "OTHER", "PPS", "TEO", "All"],
+            "label": {
+              "DfC": "Department for Communities",
+              "DfI": "Department for Infrastructure",
+              "DfE": "Department for the Economy",
+              "DAERA": "Department of Agriculture, Environment and Rural Affairs",
+              "DE": "Department of Education",
+              "DoF": "Department of Finance",
+              "DoH": "Department of Health",
+              "DoJ": "Department of Justice",
+              "OTHER": "Other",
+              "PPS": "Public Prosecution Service",
+              "TEO": "The Executive Office",
+              "All": "All"
+            }
+          },
+          "label": "Department"
+        }
+      },
+      "statistics": {
+        "STAFF": "Staff"
+      },
+      "time": "TLIST(A1)",
+      "time_series": "2024",
+      "theme": "Work, pay and benefits",
+      "theme_code": 72,
+      "subject": "NI Civil Service workforce",
+      "subject_code": 163,
+      "product": "NICS workforce",
+      "product_code": "NICSW",
+      "rows": 144
     }
   }
 }
