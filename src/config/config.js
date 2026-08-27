@@ -1,8 +1,8 @@
 // Metadata json file name. If forking do not use "data-portal-tables"
-export const meta_name = "data-portal-tables";
+export const meta_name = "hr-tables";
 
 // Default data to show on page load
-export const default_table = "MYE01T04";
+export const default_table = "CSBHWL";
 
 // Lookup for geojson files
 export const GEOG_PROPS= {
