@@ -45,6 +45,8 @@ export const capture = document.getElementById("capture");
 export const headline_year = document.getElementById("headline-year");
 export const skip_link = document.getElementById("skip-link");
 export const SIDEBAR_OPEN_KEY = "nisra:data-explorer:sidebarOpen";
+export const org_name = document.getElementById("org-name");
+
 /**
  * Re-reads query string on call
  * @returns 

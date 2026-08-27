@@ -65,32 +65,29 @@ export async function plotMap (tables, geog_type) {
 
     if (plot_ni) {
         headline_fig.classList.remove("d-none");
-        headline_stat.classList.remove("d-none");
         niHeadline.classList.remove("d-none");
     } else {
-        headline_stat.classList.add("d-none");
         headline_fig.classList.add("d-none");
         niHeadline.classList.add("d-none");
     }
 
+    headline_stat_label.innerHTML = `
+        ${stat_label}
+        <img class="i-button" src="assets/img/icon/info-circle.svg" alt="Information button"
+            data-bs-toggle="collapse" data-bs-target="#stat-info" aria-expanded="false"
+            aria-controls="stat-info">
+    `;
 
-        headline_stat_label.innerHTML = `
-            ${stat_label}
-            <img class="i-button" src="assets/img/icon/info-circle.svg" alt="Information button"
-                data-bs-toggle="collapse" data-bs-target="#stat-info" aria-expanded="false"
-                aria-controls="stat-info">
-        `;
+    stat_info_text.innerHTML = `
+        <div>Access data at: <a href="https://data.nisra.gov.uk/table/${matrix}" target="_blank">${result.label}</a></div>
+        <div>Last updated: <strong>${result.updated.substr(8, 2)}/${result.updated.substr(5, 2)}/${result.updated.substr(0, 4)}</strong></div>
+        <div><a href="mailto:${result.extension.contact.email}">Email for more information</a></div>
+    `;
 
-        stat_info_text.innerHTML = `
-            <div>Access data at: <a href="https://data.nisra.gov.uk/table/${matrix}" target="_blank">${result.label}</a></div>
-            <div>Last updated: <strong>${result.updated.substr(8, 2)}/${result.updated.substr(5, 2)}/${result.updated.substr(0, 4)}</strong></div>
-            <div><a href="mailto:${result.extension.contact.email}">Email for more information</a></div>
-        `;
-
-        const chartData = await buildCharts(tables, matrix, statistic, geog_type, result, plot_ni, time_var, subtitle_text, other_headline, other_selections, id_vars, stat_label, unit);
-        await buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit);
-        const data_series = chartData?.data_series ?? [];
-        const time_series = chartData?.time_series ?? [];
+    const chartData = await buildCharts(tables, matrix, statistic, geog_type, result, plot_ni, time_var, subtitle_text, other_headline, other_selections, id_vars, stat_label, unit);
+    await buildTables(tables, matrix, statistic, geog_type, year, time_var, other_vars, other_selections, id_vars, unit);
+    const data_series = chartData?.data_series ?? [];
+    const time_series = chartData?.time_series ?? [];
 
     if (!plot_ni) {
         

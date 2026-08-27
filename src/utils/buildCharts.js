@@ -2,7 +2,7 @@ import { wrapLabel } from "./wrapLabel.js";
 import { yAxisLabelPlugin } from "./yAxisLabelPlugin.js";
 import { chart_container, chart_card, chart_title, chart_subtitle,
          headline_fig, headline_stat, headline_year,
-         themes_menu } from "./elements.js";
+         themes_menu, org_name} from "./elements.js";
 
 export let ni_result;
 
@@ -74,11 +74,17 @@ export async function buildCharts(tables, matrix, statistic, geog_type, result, 
         data_series = ni_result.result.value;
         // Make sure values are numbers
         const values = data_series.map(v => (v === null || v === undefined ? null : Number(v)));
-        if (values[values.length - 1] != null) headline_value = values[values.length - 1].toLocaleString();
-
         time_series = ni_result.result.dimension[time_var].category.index;
-        headline_year.textContent = time_series[time_series.length - 1];
-        headline_stat.innerHTML = other_headline;
+
+        if (values[values.length - 1] != null) {
+            headline_value = values[values.length - 1].toLocaleString();
+            headline_year.textContent = time_series[time_series.length - 1];
+        } else if (values[values.length - 2] != null) {
+            headline_value = values[values.length - 2].toLocaleString();
+            headline_year.textContent = time_series[time_series.length - 2];
+        }
+
+        
 
         Chart.defaults.font.family = "'Roboto', Arial, sans-serif";
         Chart.defaults.color = "#212529"; // optional: match Bootstrap body color
@@ -155,12 +161,24 @@ export async function buildCharts(tables, matrix, statistic, geog_type, result, 
 
 
 
+        let org = "Northern Ireland Civil Service";
 
+        if (Object.keys(result.dimension).includes("ORG")) {
+            const selected_org = result.dimension.ORG.category.index[0];
+            org = result.dimension.ORG.category.label[selected_org];
+            headline_stat.classList.add("d-none");
+        } else {
+            headline_stat.classList.remove("d-none");
+            headline_stat.innerHTML = other_headline;
+        }
+
+        org_name.innerHTML = org;
+        
 
         if (time_series.length == 1) {
-            chart_title.textContent = `${stat_label} in Northern Ireland ${time_series[0]}`;
+            chart_title.textContent = `${stat_label} in the ${org} ${time_series[0]}`;
         } else {
-            chart_title.textContent = `${stat_label} in Northern Ireland (${time_series[0]} to ${time_series[time_series.length - 1]})`;
+            chart_title.textContent = `${stat_label} in the ${org} (${time_series[0]} to ${time_series[time_series.length - 1]})`;
         }
 
         chart_subtitle.innerHTML = subtitle_text;

@@ -11,7 +11,9 @@ export async function buildTables(tables, matrix, statistic, geog_type, year, ti
         additional_tables.classList.remove("d-none");
 
          // Add new tables
-         tables_title.textContent = `${tables[matrix].statistics[stats_menu.value]} in Northern Ireland (${year}) by:`;
+        const org = id_vars.includes("ORG") ? "" : "in the Northern Ireland Civil Service";
+
+         tables_title.textContent = `${tables[matrix].statistics[stats_menu.value]} ${org} (${year}) by:`;
 
         for (let i = 0; i < other_vars.length; i ++) {   
 
